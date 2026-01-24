@@ -1,7 +1,12 @@
 # emule-docker
-Emule over wine, "daemonized" inside a docker
+eMule over wine, "daemonized" inside a docker
 
 `docker run -p 8080:8080 -p 23732:23732 -p 23733:23733 -v emule_data:/app/config --name emule darioragusa/emule`
+
+## Tags
+- `0.72a` (beta)
+- `0.70b`, `latest`
+- `0.70a`
 
 ## Environment variables
 
@@ -36,14 +41,20 @@ Emule over wine, "daemonized" inside a docker
 - `/data/tmp`: Incomplete downloads
 - `/app/config`: Emule data
 
+## Credits
+
+This project provides a dockerized environment for running eMule.
+
+eMule is maintained by [irwir](https://github.com/irwir) and available [here](https://github.com/irwir/eMule).
+
 <!--
 docker build emule-docker -t darioragusa/emule:latest
 docker image prune --filter="dangling=true"
 docker run --rm -p 127.0.0.1:8080:8080 darioragusa/emule:latest
 docker push darioragusa/emule:latest
 
-docker build emule-docker -t darioragusa/emule:0.70b
+docker build emule-docker -t darioragusa/emule:0.72a
 docker image prune --filter="dangling=true"
-docker run --rm -p 127.0.0.1:8080:8080 darioragusa/emule:0.70b
-docker push darioragusa/emule:0.70b
+docker run --rm -p 8080:8080 darioragusa/emule:0.72a
+docker push darioragusa/emule:0.72a
 -->
