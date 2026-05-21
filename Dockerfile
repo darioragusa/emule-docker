@@ -18,7 +18,6 @@ ENV DISPLAY_HEIGHT=768
 ENV WINEPREFIX=/app/.wine
 ENV WINEARCH=win32
 ENV WINEDLLOVERRIDES=mscoree=d;mshtml=d
-ENV WINE_ALLOW_ROOT=1
 ENV DISPLAY=:0
 
 RUN apt update && \
@@ -39,8 +38,8 @@ RUN git clone https://github.com/novnc/websockify/ && mv /websockify /noVNC/util
 WORKDIR /app
 
 # https://github.com/irwir/eMule
-RUN wget https://github.com/irwir/eMule/releases/download/eMule_v0.72a-community/emule072a_beta2.zip -O /tmp/emule.zip && \
-    unzip /tmp/emule.zip -d /tmp/eMule0.72a_beta2 && mv /tmp/eMule0.72a_beta2/* /app
+RUN wget https://github.com/irwir/eMule/releases/download/eMule_v0.72a-community/emule0.72a_beta5.zip -O /tmp/emule.zip && \
+    unzip /tmp/emule.zip -d /tmp/eMule0.72a_beta5 && mv /tmp/eMule0.72a_beta5/* /app
 
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY scripts /app

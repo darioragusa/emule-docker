@@ -57,4 +57,8 @@ docker build emule-docker -t darioragusa/emule:0.72a
 docker image prune --filter="dangling=true"
 docker run --rm -p 8080:8080 darioragusa/emule:0.72a
 docker push darioragusa/emule:0.72a
+
+docker compose lxc:
+    security_opt:
+      - seccomp=unconfined
 -->
