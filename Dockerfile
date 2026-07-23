@@ -38,8 +38,8 @@ RUN git clone https://github.com/novnc/websockify/ && mv /websockify /noVNC/util
 WORKDIR /app
 
 # https://github.com/irwir/eMule
-RUN wget https://github.com/irwir/eMule/releases/download/eMule_v0.72a-community/emule0.72a_beta10.zip -O /tmp/emule.zip && \
-    unzip /tmp/emule.zip -d /tmp/eMule0.72a_beta10 && mv /tmp/eMule0.72a_beta10/* /app
+RUN wget https://github.com/irwir/eMule/releases/download/eMule_v0.72a-community/emule0.72a_beta12.zip -O /tmp/emule.zip && \
+    unzip /tmp/emule.zip -d /tmp/eMule0.72a_beta12 && mv /tmp/eMule0.72a_beta12/* /app
 
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY scripts /app
