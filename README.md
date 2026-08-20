@@ -4,8 +4,8 @@ eMule over wine, "daemonized" inside a docker
 `docker run -p 8080:8080 -p 23732:23732 -p 23733:23733 -v emule_data:/app/config --name emule darioragusa/emule`
 
 ## Tags
-- `0.72a` (beta)
-- `0.70b`, `latest`
+- `0.72a`, `latest`
+- `0.70b`
 - `0.70a`
 
 ## Environment variables
